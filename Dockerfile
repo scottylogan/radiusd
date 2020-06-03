@@ -7,7 +7,7 @@ RUN addgroup -S -g 95 radius && \
 
 RUN apk add --no-cache \
   freeradius-eap freeradius-krb5 freeradius-mysql freeradius-ldap freeradius-radclient \
-  wpa_supplicant krb5 samba-winbind-clients samba-common-tools
+  wpa_supplicant krb5 samba-winbind-clients samba-common-tools ca-certificates
 
 RUN cp /dev/null /etc/keytab && chown root:radius /etc/keytab && chmod 640 /etc/keytab
 

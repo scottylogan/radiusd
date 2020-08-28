@@ -15,5 +15,3 @@ push:
 dockerhub:
 	docker push scottylogan/radiusd:alpine
 
-run:
-	docker run --rm --name itarch -p 8080:8080 -v /Users/swl/src/itlab/itarch/logs:/var/log -it --env-file test.env -h itarch.stanford.edu itarch:test

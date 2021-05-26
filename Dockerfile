@@ -11,6 +11,8 @@ RUN apk add --no-cache \
 
 RUN cp /dev/null /etc/keytab && chown root:radius /etc/keytab && chmod 640 /etc/keytab
 
+COPY my.cnf /etc/my.cnf
+
 RUN rm -rf /etc/raddb /etc/samba && \
     mkdir -p /etc/raddb /etc/samba && \
     chown root:radius /etc/raddb /etc/samba && \
